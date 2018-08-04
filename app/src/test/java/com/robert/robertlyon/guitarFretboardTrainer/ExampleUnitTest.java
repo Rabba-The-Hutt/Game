@@ -1,4 +1,4 @@
-package com.example.robertlyon.game;
+package com.robert.robertlyon.guitarFretboardTrainer;
 
 import org.junit.Test;
 

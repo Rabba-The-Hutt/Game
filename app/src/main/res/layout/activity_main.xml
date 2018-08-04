@@ -40,17 +40,17 @@
         android:layout_marginTop="5dp"
         android:paddingTop="0sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/textView15"
-        app:layout_constraintStart_toEndOf="@+id/textView13"
+        app:layout_constraintEnd_toStartOf="@+id/scoreView"
+        app:layout_constraintStart_toEndOf="@+id/answerFeedback"
         app:layout_constraintTop_toBottomOf="@+id/gridLayout" />
 
     <android.support.v7.widget.GridLayout
         android:id="@+id/gridLayout"
         android:layout_width="529dp"
-        android:layout_height="108dp"
+        android:layout_height="110dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="24dp"
         app:alignmentMode="alignBounds"
         app:columnCount="6"
         app:layout_constraintBottom_toTopOf="@+id/adView"
@@ -63,83 +63,118 @@
             android:id="@+id/textViewA"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="noteSelected"
+            android:tag="A"
+            android:textAllCaps="false"
             android:text="A" />
 
         <Button
             android:id="@+id/textViewA1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="A#" />
+            android:onClick="noteSelected"
+            android:tag="A1"
+            android:textAllCaps="false"
+            android:text="A#/Bb" />
 
         <Button
             android:id="@+id/textViewB"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="noteSelected"
+            android:tag="B"
+            android:textAllCaps="false"
             android:text="B" />
 
         <Button
             android:id="@+id/textViewC"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="noteSelected"
+            android:tag="C"
+            android:textAllCaps="false"
             android:text="C" />
 
         <Button
             android:id="@+id/textViewC1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="C#" />
+            android:onClick="noteSelected"
+            android:tag="C1"
+            android:textAllCaps="false"
+            android:text="C#/Db" />
 
         <Button
             android:id="@+id/textViewD"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="noteSelected"
+            android:tag="D"
+            android:textAllCaps="false"
             android:text="D" />
 
         <Button
             android:id="@+id/textViewD1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="D#" />
+            android:onClick="noteSelected"
+            android:tag="D1"
+            android:textAllCaps="false"
+            android:text="D#/Eb" />
 
         <Button
             android:id="@+id/textViewE"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="noteSelected"
+            android:tag="E"
+            android:textAllCaps="false"
             android:text="E" />
 
         <Button
             android:id="@+id/textViewF"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="noteSelected"
+            android:tag="F"
+            android:textAllCaps="false"
             android:text="F" />
 
         <Button
             android:id="@+id/textViewF1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="F#" />
+            android:onClick="noteSelected"
+            android:tag="F1"
+            android:textAllCaps="false"
+            android:text="F#/Gb" />
 
         <Button
             android:id="@+id/textViewG"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="noteSelected"
+            android:tag="G"
+            android:textAllCaps="false"
             android:text="G" />
 
         <Button
             android:id="@+id/textViewG1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="G#" />
+            android:onClick="noteSelected"
+            android:tag="G1"
+            android:textAllCaps="false"
+            android:text="G#/Ab" />
     </android.support.v7.widget.GridLayout>
 
     <TextView
-        android:id="@+id/textView13"
+        android:id="@+id/answerFeedback"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text="Timer"
+        android:text=""
         android:textSize="50sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/adView"
@@ -148,13 +183,12 @@
         app:layout_constraintVertical_bias="1.0" />
 
     <TextView
-        android:id="@+id/textView15"
+        android:id="@+id/scoreView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginTop="8dp"
-        android:text="Score"
+        android:text="0/0"
         android:textSize="50sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

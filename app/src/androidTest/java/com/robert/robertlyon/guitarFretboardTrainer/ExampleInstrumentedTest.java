@@ -1,4 +1,4 @@
-package com.example.robertlyon.game;
+package com.robert.robertlyon.guitarFretboardTrainer;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
