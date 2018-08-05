@@ -6,8 +6,8 @@ android {
         applicationId "com.robert.robertlyon.guitarFretboardTrainer"
         minSdkVersion 19
         targetSdkVersion 28
-        versionCode 110
-        versionName "1.10"
+        versionCode 120
+        versionName "1.2"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {

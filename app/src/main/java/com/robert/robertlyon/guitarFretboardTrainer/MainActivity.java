@@ -8,12 +8,17 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
+
 import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
     TextView scoreView;
     TextView answerFeedback;
+    AdView mAdView;
 
     android.support.v7.widget.GridLayout noteGrid;
     Random random = new Random();
@@ -37,6 +42,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        MobileAds.initialize(this, "ca-app-pub-1187196233110059~6141688941");
+        mAdView = findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
 
         scoreView = findViewById(R.id.scoreView);
         answerFeedback = findViewById(R.id.answerFeedback);
@@ -278,4 +288,23 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    //Saving instance state of score because ads change the screen rotation
+    @Override
+    public void onSaveInstanceState(Bundle savedInstanceState) {
+
+        super.onSaveInstanceState(savedInstanceState);
+        savedInstanceState.putString("scoreString", scoreView.getText().toString());
+        savedInstanceState.putInt("correctQuestions", correctAnswers);
+        savedInstanceState.putInt("numOfQuestions", numberOfQuestions);
+    }
+
+    @Override
+    public void onRestoreInstanceState(Bundle savedInstanceState)
+    {
+        super.onRestoreInstanceState(savedInstanceState);
+        correctAnswers = savedInstanceState.getInt("correctQuestions");
+        numberOfQuestions = savedInstanceState.getInt("numOfQuestions");
+        scoreView.setText(savedInstanceState.getString("scoreString"));
+
+    }
 }
