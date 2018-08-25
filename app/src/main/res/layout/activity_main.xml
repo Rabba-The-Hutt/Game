@@ -36,7 +36,7 @@
 
     <com.google.android.gms.ads.AdView
         android:id="@+id/adView"
-        android:layout_width="wrap_content"
+        android:layout_width="279dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:paddingTop="0sp"
@@ -69,6 +69,7 @@
             android:onClick="noteSelected"
             android:tag="A"
             android:textAllCaps="false"
+            android:fontFamily="@font/atomic_age"
             android:text="A" />
 
         <Button
@@ -78,6 +79,7 @@
             android:onClick="noteSelected"
             android:tag="A1"
             android:textAllCaps="false"
+            android:fontFamily="@font/atomic_age"
             android:text="A#/Bb" />
 
         <Button
@@ -87,6 +89,7 @@
             android:onClick="noteSelected"
             android:tag="B"
             android:textAllCaps="false"
+            android:fontFamily="@font/atomic_age"
             android:text="B" />
 
         <Button
@@ -96,6 +99,7 @@
             android:onClick="noteSelected"
             android:tag="C"
             android:textAllCaps="false"
+            android:fontFamily="@font/atomic_age"
             android:text="C" />
 
         <Button
@@ -105,6 +109,7 @@
             android:onClick="noteSelected"
             android:tag="C1"
             android:textAllCaps="false"
+            android:fontFamily="@font/atomic_age"
             android:text="C#/Db" />
 
         <Button
@@ -114,6 +119,7 @@
             android:onClick="noteSelected"
             android:tag="D"
             android:textAllCaps="false"
+            android:fontFamily="@font/atomic_age"
             android:text="D" />
 
         <Button
@@ -123,6 +129,7 @@
             android:onClick="noteSelected"
             android:tag="D1"
             android:textAllCaps="false"
+            android:fontFamily="@font/atomic_age"
             android:text="D#/Eb" />
 
         <Button
@@ -132,6 +139,7 @@
             android:onClick="noteSelected"
             android:tag="E"
             android:textAllCaps="false"
+            android:fontFamily="@font/atomic_age"
             android:text="E" />
 
         <Button
@@ -141,6 +149,7 @@
             android:onClick="noteSelected"
             android:tag="F"
             android:textAllCaps="false"
+            android:fontFamily="@font/atomic_age"
             android:text="F" />
 
         <Button
@@ -150,6 +159,7 @@
             android:onClick="noteSelected"
             android:tag="F1"
             android:textAllCaps="false"
+            android:fontFamily="@font/atomic_age"
             android:text="F#/Gb" />
 
         <Button
@@ -159,6 +169,7 @@
             android:onClick="noteSelected"
             android:tag="G"
             android:textAllCaps="false"
+            android:fontFamily="@font/atomic_age"
             android:text="G" />
 
         <Button
@@ -168,6 +179,7 @@
             android:onClick="noteSelected"
             android:tag="G1"
             android:textAllCaps="false"
+            android:fontFamily="@font/atomic_age"
             android:text="G#/Ab" />
     </android.support.v7.widget.GridLayout>
 
@@ -179,6 +191,7 @@
         android:layout_marginTop="8dp"
         android:text=""
         android:textSize="50sp"
+        android:fontFamily="@font/atomic_age"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/adView"
         app:layout_constraintStart_toStartOf="parent"
@@ -193,6 +206,7 @@
         android:layout_marginTop="8dp"
         android:text="0/0"
         android:textSize="50sp"
+        android:fontFamily="@font/atomic_age"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/adView"
