@@ -148,6 +148,7 @@ public class MainActivity extends AppCompatActivity {
         };
         countdownRunnable.run();
 
+        //Runs second timer which counts down dor 2 minutes
         mainTimerRunnable = new Runnable() {
             int time = 125;
             @Override
