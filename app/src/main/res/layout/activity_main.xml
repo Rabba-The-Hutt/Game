@@ -5,6 +5,7 @@
     xmlns:ads="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#3498db"
     tools:context=".MainActivity">
 
     <ImageView
@@ -36,165 +37,205 @@
 
     <com.google.android.gms.ads.AdView
         android:id="@+id/adView"
-        android:layout_width="279dp"
+        android:layout_width="284dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
+        android:layout_marginEnd="8dp"
         android:paddingTop="0sp"
         ads:adSize="BANNER"
         ads:adUnitId="ca-app-pub-1187196233110059/7231409330"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/scoreView"
+        app:layout_constraintEnd_toStartOf="@+id/timerTextView"
         app:layout_constraintStart_toEndOf="@+id/answerFeedback"
         app:layout_constraintTop_toBottomOf="@+id/gridLayout" />
 
     <android.support.v7.widget.GridLayout
         android:id="@+id/gridLayout"
-        android:layout_width="529dp"
+        android:layout_width="match_parent"
         android:layout_height="110dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="32dp"
         app:alignmentMode="alignBounds"
         app:columnCount="6"
         app:layout_constraintBottom_toTopOf="@+id/adView"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/noteGrid"
+        app:orientation="vertical"
         app:rowCount="2">
 
-        <Button
-            android:id="@+id/textViewA"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="noteSelected"
-            android:tag="A"
-            android:textAllCaps="false"
-            android:fontFamily="@font/atomic_age"
-            android:text="A" />
+            android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/textViewA1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="noteSelected"
-            android:tag="A1"
-            android:textAllCaps="false"
-            android:fontFamily="@font/atomic_age"
-            android:text="A#/Bb" />
+            <Button
+                android:id="@+id/textViewA"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/atomic_age"
+                android:onClick="noteSelected"
+                android:tag="A"
+                android:text="A"
+                android:background="@drawable/button_design"
+                android:textAllCaps="false" />
 
-        <Button
-            android:id="@+id/textViewB"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="noteSelected"
-            android:tag="B"
-            android:textAllCaps="false"
-            android:fontFamily="@font/atomic_age"
-            android:text="B" />
+            <Button
+                android:id="@+id/textViewA1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/atomic_age"
+                android:onClick="noteSelected"
+                android:tag="A1"
+                android:text="A#/Bb"
+                android:background="@drawable/button_design"
+                android:textAllCaps="false" />
 
-        <Button
-            android:id="@+id/textViewC"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="noteSelected"
-            android:tag="C"
-            android:textAllCaps="false"
-            android:fontFamily="@font/atomic_age"
-            android:text="C" />
+            <Button
+                android:id="@+id/textViewB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/atomic_age"
+                android:onClick="noteSelected"
+                android:tag="B"
+                android:text="B"
+                android:background="@drawable/button_design"
+                android:textAllCaps="false" />
 
-        <Button
-            android:id="@+id/textViewC1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="noteSelected"
-            android:tag="C1"
-            android:textAllCaps="false"
-            android:fontFamily="@font/atomic_age"
-            android:text="C#/Db" />
+            <Button
+                android:id="@+id/textViewC"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/atomic_age"
+                android:onClick="noteSelected"
+                android:tag="C"
+                android:text="C"
+                android:background="@drawable/button_design"
+                android:textAllCaps="false" />
 
-        <Button
-            android:id="@+id/textViewD"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="noteSelected"
-            android:tag="D"
-            android:textAllCaps="false"
-            android:fontFamily="@font/atomic_age"
-            android:text="D" />
+            <Button
+                android:id="@+id/textViewC1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/atomic_age"
+                android:onClick="noteSelected"
+                android:tag="C1"
+                android:text="C#/Db"
+                android:background="@drawable/button_design"
+                android:textAllCaps="false" />
 
-        <Button
-            android:id="@+id/textViewD1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="noteSelected"
-            android:tag="D1"
-            android:textAllCaps="false"
-            android:fontFamily="@font/atomic_age"
-            android:text="D#/Eb" />
+            <Button
+                android:id="@+id/textViewD"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/atomic_age"
+                android:onClick="noteSelected"
+                android:tag="D"
+                android:text="D"
+                android:background="@drawable/button_design"
+                android:textAllCaps="false" />
+        </LinearLayout>
 
-        <Button
-            android:id="@+id/textViewE"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="noteSelected"
-            android:tag="E"
-            android:textAllCaps="false"
-            android:fontFamily="@font/atomic_age"
-            android:text="E" />
 
-        <Button
-            android:id="@+id/textViewF"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="noteSelected"
-            android:tag="F"
-            android:textAllCaps="false"
-            android:fontFamily="@font/atomic_age"
-            android:text="F" />
+            android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/textViewF1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="noteSelected"
-            android:tag="F1"
-            android:textAllCaps="false"
-            android:fontFamily="@font/atomic_age"
-            android:text="F#/Gb" />
+            <Button
+                android:id="@+id/textViewD1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/atomic_age"
+                android:onClick="noteSelected"
+                android:tag="D1"
+                android:text="D#/Eb"
+                android:background="@drawable/button_design"
+                android:textAllCaps="false" />
 
-        <Button
-            android:id="@+id/textViewG"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="noteSelected"
-            android:tag="G"
-            android:textAllCaps="false"
-            android:fontFamily="@font/atomic_age"
-            android:text="G" />
+            <Button
+                android:id="@+id/textViewE"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/atomic_age"
+                android:onClick="noteSelected"
+                android:tag="E"
+                android:text="E"
+                android:background="@drawable/button_design"
+                android:textAllCaps="false" />
 
-        <Button
-            android:id="@+id/textViewG1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="noteSelected"
-            android:tag="G1"
-            android:textAllCaps="false"
-            android:fontFamily="@font/atomic_age"
-            android:text="G#/Ab" />
+            <Button
+                android:id="@+id/textViewF"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/atomic_age"
+                android:onClick="noteSelected"
+                android:tag="F"
+                android:text="F"
+                android:background="@drawable/button_design"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/textViewF1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/atomic_age"
+                android:onClick="noteSelected"
+                android:tag="F1"
+                android:text="F#/Gb"
+                android:background="@drawable/button_design"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/textViewG"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/atomic_age"
+                android:onClick="noteSelected"
+                android:tag="G"
+                android:text="G"
+                android:background="@drawable/button_design"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/textViewG1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/atomic_age"
+                android:onClick="noteSelected"
+                android:tag="G1"
+                android:text="G#/Ab"
+                android:background="@drawable/button_design"
+                android:textAllCaps="false" />
+        </LinearLayout>
     </android.support.v7.widget.GridLayout>
 
     <TextView
         android:id="@+id/answerFeedback"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text=""
-        android:textSize="50sp"
         android:fontFamily="@font/atomic_age"
+        android:text=""
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/adView"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/scoreView"
         app:layout_constraintTop_toBottomOf="@+id/gridLayout"
         app:layout_constraintVertical_bias="1.0" />
 
@@ -203,15 +244,43 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
-        android:layout_marginTop="8dp"
+        android:fontFamily="@font/atomic_age"
         android:text="0/0"
-        android:textSize="50sp"
+        android:textSize="20sp"
+        android:textColor="#FFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/answerFeedback"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/timerTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="2:00"
+        android:textSize="25sp"
+        android:textColor="#FFF"
         android:fontFamily="@font/atomic_age"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/adView"
-        app:layout_constraintTop_toBottomOf="@+id/gridLayout"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintStart_toEndOf="@+id/adView" />
+
+    <TextView
+        android:id="@+id/countdownTextView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFF"
+        android:gravity="center"
+        android:text="5"
+        android:textColor="#000"
+        android:textSize="250sp"
+        android:fontFamily="@font/atomic_age"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
 
 </android.support.constraint.ConstraintLayout>
