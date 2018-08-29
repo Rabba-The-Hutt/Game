@@ -1,5 +1,7 @@
 package com.robert.robertlyon.guitarFretboardTrainer;
 
+import android.content.Intent;
+import android.content.IntentFilter;
 import android.graphics.Color;
 import android.os.AsyncTask;
 import android.os.Handler;
@@ -7,6 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.GridLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -157,6 +160,10 @@ public class MainActivity extends AppCompatActivity {
                 {
                     mMainTimerTextView.setText("Time: " + "0");
                     handler.removeCallbacks(mainTimerRunnable);
+                    Intent anIntent = new Intent(getApplicationContext(), GameOver.class);
+                    anIntent.putExtra("correctAnswers", correctAnswers);
+                    anIntent.putExtra("numberOfQuestions", numberOfQuestions);
+                    startActivity(anIntent);
                 }
                 else
                 {

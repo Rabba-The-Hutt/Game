@@ -7,11 +7,15 @@ import android.view.View;
 
 public class StartScreen extends AppCompatActivity {
 
-
-
     public void startGame(View v)
     {
         Intent anIntent = new Intent(this, MainActivity.class);
+        startActivity(anIntent);
+    }
+
+    public void startStatsActivity(View v)
+    {
+        Intent anIntent = new Intent(this, StatsActivity.class);
         startActivity(anIntent);
     }
 

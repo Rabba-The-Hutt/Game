@@ -33,6 +33,9 @@
         android:fontFamily="@font/atomic_age"
         android:text="Stats"
         android:textSize="50sp"
+        android:onClick="startStatsActivity"
+        android:visibility="invisible"
+        android:enabled="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/startButton"
         app:layout_constraintStart_toStartOf="parent"
@@ -41,7 +44,7 @@
 
     <Button
         android:id="@+id/startButton"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
         android:layout_marginEnd="8dp"
@@ -51,6 +54,7 @@
         android:onClick="startGame"
         android:text="Start"
         android:textSize="50sp"
+        android:background="@drawable/button_design"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/statisticsButton"
